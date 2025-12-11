@@ -14,7 +14,7 @@
     content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:; connect-src 'self';">
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Ngọc Tân - DA & CB Pro Portfolio">
+  <meta name="description" content="Lê Ngọc Tân - Data Analytics & Cybersecurity Professional Portfolio">
   <meta name="keywords" content="Data Analytics, Cybersecurity, Portfolio, Vietnam">
   <meta name="author" content="Lê Ngọc Tân">
 
@@ -27,15 +27,11 @@
     href="https://lh3.googleusercontent.com/a/ACg8ocLgLLMWpxWQA3lm-MccYqT3r3fEOCaNn5ufCy1A2cOdbWGjRwU=s96-c"
     type="image/png">
 
-  <!-- Bootstrap CSS with SRI -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Font Awesome with SRI -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,9 +89,10 @@
 
     /* Navbar */
     .navbar {
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       padding: 1rem 0;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, border-bottom 0.3s ease, padding 0.3s ease;
     }
 
     .data-theme .navbar {
@@ -248,7 +245,8 @@
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 1.5rem;
-      transition: all 0.5s ease;
+      transition: color 0.5s ease, background 0.5s ease;
+      will-change: color, background;
     }
 
     .data-theme .hero-content h1 {
@@ -336,6 +334,7 @@
     .hero-image {
       position: relative;
       animation: float 3s ease-in-out infinite;
+      will-change: transform;
     }
 
     .hero-image img {
@@ -814,7 +813,7 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
       .hero-content h1 {
         font-size: 2.5rem;
       }
@@ -840,22 +839,18 @@
         flex-direction: column !important;
       }
 
-      /* Fix navbar alignment on mobile */
-      .navbar-nav {
-        align-items: flex-start !important;
+      .hero-content {
+        margin-bottom: 3rem;
+        text-align: center;
       }
 
-      .nav-item {
-        width: 100%;
+      .hero-image {
+        margin-bottom: 2rem;
       }
 
-      .nav-item:has(.theme-btn) {
-        margin-top: 10px;
-        margin-left: 0 !important;
-      }
-
-      .theme-btn {
-        margin-left: 0 !important;
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
       }
     }
 
@@ -1062,7 +1057,7 @@
               rel="noopener noreferrer">LinkedIn</a></li>
           <li class="nav-item"><a class="nav-link" href="https://github.com/Ahihikhongduosao" target="_blank"
               rel="noopener noreferrer">Github</a></li>
-          <li class="nav-item ms-2">
+          <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
             <button id="themeBtn" class="theme-btn" aria-label="Chuyển đổi giao diện"
               title="Nhấn để chuyển đổi giữa Data Analytics và Cybersecurity">
               <i id="themeIcon" class="fas fa-chart-line themed-icon"></i>
@@ -1376,10 +1371,8 @@
     </div>
   </noscript>
 
-  <!-- Bootstrap JS with SRI -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
-    integrity="sha512-VK2zcvntEufaimc+efOYi622VN5ZacdnufnmX7zIhCPmjhKnOi9ZDMtg1/ug5l183f19gG1/cBstPO4D8N/Tvw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   <script>
     // Theme Toggle with Security Validation
     (function () {
