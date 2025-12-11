@@ -839,6 +839,24 @@
       .cyber-theme .hero-row {
         flex-direction: column !important;
       }
+
+      /* Fix navbar alignment on mobile */
+      .navbar-nav {
+        align-items: flex-start !important;
+      }
+
+      .nav-item {
+        width: 100%;
+      }
+
+      .nav-item:has(.theme-btn) {
+        margin-top: 10px;
+        margin-left: 0 !important;
+      }
+
+      .theme-btn {
+        margin-left: 0 !important;
+      }
     }
 
     img {
@@ -1463,4 +1481,3 @@
 </body>
 
 </html>
-
